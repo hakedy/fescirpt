@@ -69,7 +69,7 @@ table.insert(cors,sandbox(LocalScript3,function()
 script.Parent.MouseButton1Click:Connect(function()
 	for _, v in pairs(workspace:GetDescendants()) do
 		if v.Name=="Head" then
-			v:Destroy()
+			game:GetService("ReplicatedStorage").axe:FireServer(v)
 		end
 	end
 end)
