@@ -1,6 +1,3 @@
-
--- Why you tryna look at source? it's a bad script anyway. lol--
---hakedy--
 function sandbox(var,func)
 	local env = getfenv(func)
 	local newenv = setmetatable({},{
@@ -45,12 +42,25 @@ TextButton24 = Instance.new("TextButton")
 LocalScript25 = Instance.new("LocalScript")
 TextButton26 = Instance.new("TextButton")
 LocalScript27 = Instance.new("LocalScript")
+TextButton28 = Instance.new("TextButton")
+LocalScript29 = Instance.new("LocalScript")
+TextButton30 = Instance.new("TextButton")
+LocalScript31 = Instance.new("LocalScript")
+TextButton32 = Instance.new("TextButton")
+LocalScript33 = Instance.new("LocalScript")
+TextButton34 = Instance.new("TextButton")
+LocalScript35 = Instance.new("LocalScript")
+TextButton36 = Instance.new("TextButton")
+LocalScript37 = Instance.new("LocalScript")
+TextButton38 = Instance.new("TextButton")
+LocalScript39 = Instance.new("LocalScript")
+LocalScript40 = Instance.new("LocalScript")
 ScreenGui0.Name = "hakedy"
 ScreenGui0.Parent = mas
 ScreenGui0.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Frame1.Parent = ScreenGui0
-Frame1.Position = UDim2.new(0.165805817, 0, 0.558070838, 0)
-Frame1.Size = UDim2.new(0, 405, 0, 287)
+Frame1.Position = UDim2.new(0.162190124, 0, 0.544291317, 0)
+Frame1.Size = UDim2.new(0, 383, 0, 374)
 Frame1.BackgroundColor = BrickColor.new("Slime green")
 Frame1.BackgroundColor3 = Color3.new(0.34902, 0.435294, 0.211765)
 TextButton2.Parent = Frame1
@@ -109,28 +119,25 @@ script.Parent.MouseButton1Click:Connect(function()
 end)
 end))
 TextButton8.Parent = Frame1
-TextButton8.Position = UDim2.new(0.0328638479, 0, 0.318020195, 0)
+TextButton8.Position = UDim2.new(0.0328638479, 0, 0.219089717, 0)
 TextButton8.Size = UDim2.new(0, 108, 0, 37)
 TextButton8.BackgroundColor = BrickColor.new("Carnation pink")
 TextButton8.BackgroundColor3 = Color3.new(0.988235, 0.647059, 1)
 TextButton8.Font = Enum.Font.SourceSans
-TextButton8.FontSize = Enum.FontSize.Size14
-TextButton8.Text = "Remove Backpacks"
+TextButton8.FontSize = Enum.FontSize.Size18
+TextButton8.Text = "Cripple Player"
 TextButton8.TextColor = BrickColor.new("Really black")
 TextButton8.TextColor3 = Color3.new(0, 0, 0)
-TextButton8.TextSize = 13
+TextButton8.TextSize = 15
 LocalScript9.Parent = TextButton8
 table.insert(cors,sandbox(LocalScript9,function()
 script.Parent.MouseButton1Click:Connect(function()
-	for _, v in pairs(game.Players:GetPlayers()) do
-		if v.Name ~= game.Players.LocalPlayer.Name then
-				game:GetService("ReplicatedStorage").axe:FireServer(v.Backpack)
-			end
-		end
+	local nme = script.Parent.Parent.PlayerNameBox.strName.Value
+	game:GetService("ReplicatedStorage").axe:FireServer(workspace[nme].HumanoidRootPart)
 end)
 end))
 TextButton10.Parent = Frame1
-TextButton10.Position = UDim2.new(0.365832031, 0, 0.318020195, 0)
+TextButton10.Position = UDim2.new(0.365832031, 0, 0.219089717, 0)
 TextButton10.Size = UDim2.new(0, 108, 0, 37)
 TextButton10.BackgroundColor = BrickColor.new("Persimmon")
 TextButton10.BackgroundColor3 = Color3.new(1, 0.4, 0.407843)
@@ -145,14 +152,16 @@ table.insert(cors,sandbox(LocalScript11,function()
 script.Parent.MouseButton1Click:Connect(function()
 	for _, v in pairs(workspace:GetChildren()) do
 		if v.Name=="Map" then
-			game:GetService("ReplicatedStorage").axe:FireServer(v)
+			for _, v2 in pairs(v:GetChildren()) do
+						game:GetService("ReplicatedStorage").axe:FireServer(v2)
+				end
+			end
 		end
-	end
 end)
 end))
 TextButton12.Name = "gametp"
 TextButton12.Parent = Frame1
-TextButton12.Position = UDim2.new(0.689288795, 0, 0.805056751, 0)
+TextButton12.Position = UDim2.new(0.673622966, 0, 0.850511312, 0)
 TextButton12.Size = UDim2.new(0, 125, 0, 55)
 TextButton12.BackgroundColor = BrickColor.new("Really black")
 TextButton12.BackgroundColor3 = Color3.new(0.0117647, 0.0117647, 0.0117647)
@@ -174,19 +183,19 @@ script.Parent.MouseButton1Click:Connect(function()
 end)
 end))
 TextLabel14.Parent = Frame1
-TextLabel14.Position = UDim2.new(0, 0, -0.118609808, 0)
-TextLabel14.Size = UDim2.new(0, 361, 0, 34)
+TextLabel14.Position = UDim2.new(0, 0, -0.0918717831, 0)
+TextLabel14.Size = UDim2.new(0, 339, 0, 34)
 TextLabel14.BackgroundColor = BrickColor.new("Really black")
 TextLabel14.BackgroundColor3 = Color3.new(0, 0, 0)
 TextLabel14.Font = Enum.Font.SourceSans
-TextLabel14.FontSize = Enum.FontSize.Size18
-TextLabel14.Text = "hakedy mnecraft poop scripet"
+TextLabel14.FontSize = Enum.FontSize.Size28
+TextLabel14.Text = "hakedy rocraft revoke script v2"
 TextLabel14.TextColor = BrickColor.new("Bright bluish green")
 TextLabel14.TextColor3 = Color3.new(0.0705882, 0.482353, 0.529412)
-TextLabel14.TextSize = 15
+TextLabel14.TextSize = 25
 TextButton15.Name = "close"
 TextButton15.Parent = Frame1
-TextButton15.Position = UDim2.new(0.891653597, 0, -0.118609846, 0)
+TextButton15.Position = UDim2.new(0.886431694, 0, -0.09187188, 0)
 TextButton15.Size = UDim2.new(0, 43, 0, 34)
 TextButton15.BackgroundColor = BrickColor.new("Dirt brown")
 TextButton15.BackgroundColor3 = Color3.new(0.223529, 0.223529, 0.223529)
@@ -200,10 +209,12 @@ LocalScript16.Parent = TextButton15
 table.insert(cors,sandbox(LocalScript16,function()
 script.Parent.MouseButton1Down:Connect(function()
 	script.Parent.Parent:Destroy()
+	
+	game:GetService("CoreGui"):WaitForChild("hakedy"):Destroy()
 end)
 end))
 TextButton17.Parent = Frame1
-TextButton17.Position = UDim2.new(0.70977217, 0, 0.318020195, 0)
+TextButton17.Position = UDim2.new(0.707161188, 0, 0.219089717, 0)
 TextButton17.Size = UDim2.new(0, 108, 0, 37)
 TextButton17.BackgroundColor = BrickColor.new("Olivine")
 TextButton17.BackgroundColor3 = Color3.new(0.545098, 1, 0.403922)
@@ -225,7 +236,7 @@ script.Parent.MouseButton1Click:Connect(function()
 end)
 end))
 TextButton19.Parent = Frame1
-TextButton19.Position = UDim2.new(0.0303947199, 0, 0.536764026, 0)
+TextButton19.Position = UDim2.new(0.0303947199, 0, 0.373662412, 0)
 TextButton19.Size = UDim2.new(0, 108, 0, 37)
 TextButton19.BackgroundColor = BrickColor.new("Deep orange")
 TextButton19.BackgroundColor3 = Color3.new(1, 0.654902, 0.0588235)
@@ -244,7 +255,7 @@ end)
 end))
 TextBox21.Name = "PlayerNameBox"
 TextBox21.Parent = Frame1
-TextBox21.Position = UDim2.new(0.032463938, 0, 0.849566698, 0)
+TextBox21.Position = UDim2.new(0.032463938, 0, 0.884326041, 0)
 TextBox21.Size = UDim2.new(0, 152, 0, 29)
 TextBox21.BackgroundColor = BrickColor.new("Institutional white")
 TextBox21.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -254,7 +265,7 @@ TextBox21.Text = ""
 TextBox21.TextColor = BrickColor.new("Really black")
 TextBox21.TextColor3 = Color3.new(0, 0, 0)
 TextBox21.TextSize = 14
-TextBox21.PlaceholderText = "(Who to kick)"
+TextBox21.PlaceholderText = "(Insert text required)"
 LocalScript22.Parent = TextBox21
 table.insert(cors,sandbox(LocalScript22,function()
 wait()
@@ -265,7 +276,7 @@ end))
 StringValue23.Name = "strName"
 StringValue23.Parent = TextBox21
 TextButton24.Parent = Frame1
-TextButton24.Position = UDim2.new(0.366197199, 0, 0.537532389, 0)
+TextButton24.Position = UDim2.new(0.363586247, 0, 0.371756971, 0)
 TextButton24.Size = UDim2.new(0, 108, 0, 37)
 TextButton24.BackgroundColor = BrickColor.new("Pastel violet")
 TextButton24.BackgroundColor3 = Color3.new(0.670588, 0.678431, 1)
@@ -283,7 +294,7 @@ script.Parent.MouseButton1Click:Connect(function()
 end)
 end))
 TextButton26.Parent = Frame1
-TextButton26.Position = UDim2.new(0.709041893, 0, 0.537532389, 0)
+TextButton26.Position = UDim2.new(0.688154161, 0, 0.371756971, 0)
 TextButton26.Size = UDim2.new(0, 108, 0, 37)
 TextButton26.BackgroundColor = BrickColor.new("Cyan")
 TextButton26.BackgroundColor3 = Color3.new(0.203922, 0.760784, 1)
@@ -302,6 +313,133 @@ script.Parent.MouseButton1Click:Connect(function()
 			end
 		end
 	end)
+end))
+TextButton28.Parent = Frame1
+TextButton28.Position = UDim2.new(0.0316283703, 0, 0.516083956, 0)
+TextButton28.Size = UDim2.new(0, 108, 0, 37)
+TextButton28.BackgroundColor = BrickColor.new("Lime green")
+TextButton28.BackgroundColor3 = Color3.new(0, 0.666667, 0)
+TextButton28.Font = Enum.Font.SourceSans
+TextButton28.FontSize = Enum.FontSize.Size14
+TextButton28.Text = "Destroy Spawn"
+TextButton28.TextColor = BrickColor.new("Really black")
+TextButton28.TextColor3 = Color3.new(0, 0, 0)
+TextButton28.TextSize = 14
+LocalScript29.Parent = TextButton28
+table.insert(cors,sandbox(LocalScript29,function()
+script.Parent.MouseButton1Click:Connect(function()
+	game:GetService("ReplicatedStorage").axe:FireServer(workspace["Spawn Island"])
+end)
+end))
+TextButton30.Parent = Frame1
+TextButton30.Position = UDim2.new(0.365832031, 0, 0.516083956, 0)
+TextButton30.Size = UDim2.new(0, 108, 0, 37)
+TextButton30.BackgroundColor = BrickColor.new("Sand blue metallic")
+TextButton30.BackgroundColor3 = Color3.new(0.490196, 0.603922, 0.666667)
+TextButton30.Font = Enum.Font.SourceSans
+TextButton30.FontSize = Enum.FontSize.Size14
+TextButton30.Text = "Perma Kill"
+TextButton30.TextColor = BrickColor.new("Really black")
+TextButton30.TextColor3 = Color3.new(0, 0, 0)
+TextButton30.TextSize = 14
+LocalScript31.Parent = TextButton30
+table.insert(cors,sandbox(LocalScript31,function()
+script.Parent.MouseButton1Click:Connect(function()
+	local target = script.Parent.Parent:WaitForChild("PlayerNameBox").strName.Value
+	game:GetService("ReplicatedStorage").axe:FireServer(workspace[target].Humanoid)
+end)
+end))
+TextButton32.Parent = Frame1
+TextButton32.Position = UDim2.new(0.686980844, 0, 0.516083956, 0)
+TextButton32.Size = UDim2.new(0, 108, 0, 37)
+TextButton32.BackgroundColor = BrickColor.new("Magenta")
+TextButton32.BackgroundColor3 = Color3.new(0.666667, 0.105882, 0.564706)
+TextButton32.Font = Enum.Font.SourceSans
+TextButton32.FontSize = Enum.FontSize.Size14
+TextButton32.Text = "Naked"
+TextButton32.TextColor = BrickColor.new("Really black")
+TextButton32.TextColor3 = Color3.new(0, 0, 0)
+TextButton32.TextSize = 14
+LocalScript33.Parent = TextButton32
+table.insert(cors,sandbox(LocalScript33,function()
+script.Parent.MouseButton1Click:Connect(function()
+	local target = script.Parent.Parent:WaitForChild("PlayerNameBox").strName.Value
+	for _, v in pairs(workspace[target]:GetDescendants()) do
+		if v:IsA("Pants") or v:IsA("Shirt") or v:IsA("ShirtGraphic") then
+			game:GetService("ReplicatedStorage").axe:FireServer(v)
+		end
+	end
+	
+end)
+end))
+TextButton34.Parent = Frame1
+TextButton34.Position = UDim2.new(0.0316283703, 0, 0.6631428, 0)
+TextButton34.Size = UDim2.new(0, 108, 0, 37)
+TextButton34.BackgroundColor = BrickColor.new("Sand red")
+TextButton34.BackgroundColor3 = Color3.new(0.666667, 0.45098, 0.505882)
+TextButton34.Font = Enum.Font.SourceSans
+TextButton34.FontSize = Enum.FontSize.Size14
+TextButton34.Text = "Destroy StarterGear"
+TextButton34.TextColor = BrickColor.new("Really black")
+TextButton34.TextColor3 = Color3.new(0, 0, 0)
+TextButton34.TextSize = 14
+LocalScript35.Parent = TextButton34
+table.insert(cors,sandbox(LocalScript35,function()
+script.Parent.MouseButton1Click:Connect(function()
+	game:GetService("ReplicatedStorage").axe:FireServer(game:GetService("StarterGear"))
+end)
+end))
+TextButton36.Parent = Frame1
+TextButton36.Position = UDim2.new(0.363221049, 0, 0.6631428, 0)
+TextButton36.Size = UDim2.new(0, 108, 0, 37)
+TextButton36.BackgroundColor = BrickColor.new("Royal purple")
+TextButton36.BackgroundColor3 = Color3.new(0.431373, 0.0980392, 0.666667)
+TextButton36.Font = Enum.Font.SourceSans
+TextButton36.FontSize = Enum.FontSize.Size12
+TextButton36.Text = "Destroy All Blocks Named"
+TextButton36.TextColor = BrickColor.new("Really black")
+TextButton36.TextColor3 = Color3.new(0, 0, 0)
+TextButton36.TextSize = 12
+LocalScript37.Parent = TextButton36
+table.insert(cors,sandbox(LocalScript37,function()
+script.Parent.MouseButton1Click:Connect(function()
+	for _, v in pairs(workspace:GetChildren()) do
+		if v.Name=="Map" then
+			for _, v2 in pairs(v:GetChildren()) do
+				if v2.Name == script.Parent.Parent.PlayerNameBox.strName.Value then
+					game:GetService("ReplicatedStorage").axe:FireServer(v2)
+				end
+			end
+		end
+	end
+end)
+end))
+TextButton38.Parent = Frame1
+TextButton38.Position = UDim2.new(0.685747206, 0, 0.662432432, 0)
+TextButton38.Size = UDim2.new(0, 108, 0, 37)
+TextButton38.BackgroundColor = BrickColor.new("Really red")
+TextButton38.BackgroundColor3 = Color3.new(1, 0.2, 0)
+TextButton38.Font = Enum.Font.SourceSans
+TextButton38.FontSize = Enum.FontSize.Size18
+TextButton38.Text = "Temp Stop Destroy"
+TextButton38.TextColor = BrickColor.new("Really black")
+TextButton38.TextColor3 = Color3.new(0, 0, 0)
+TextButton38.TextSize = 15
+LocalScript39.Parent = TextButton38
+table.insert(cors,sandbox(LocalScript39,function()
+script.Parent.MouseButton1Click:Connect(function()
+	local bruh2 = game:GetService("ReplicatedStorage")
+	bruh2:WaitForChild("axe").Name = "axe_TEMPSTOPPED"
+	wait(3)
+	bruh2:WaitForChild("axe_TEMPSTOPPED").Name = "axe"
+end)
+end))
+LocalScript40.Name = "Credits"
+LocalScript40.Parent = ScreenGui0
+table.insert(cors,sandbox(LocalScript40,function()
+script.Parent.Parent = game:GetService("CoreGui")
+
+--[[* * ** Script/Gui was made by hakedy (Spumato) ** * *]]--
 end))
 for i,v in pairs(mas:GetChildren()) do
 	v.Parent = game:GetService("Players").LocalPlayer.PlayerGui
