@@ -1,0 +1,14 @@
+--you can only run this on a newer version of default place, for example you cant run this on 4nn1s place--
+
+n=game:GetService("Players").LocalPlayer.Character
+x=game:GetService("Players").LocalPlayer.Backpack
+workspace.Tools.Chest_Cyclotron.LidToggle:FireServer()
+w=n:WaitForChild("Cyclotron")
+w.Parent=x
+wait(0.2)
+local tool = game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Cyclotron"):FindFirstChild("ChangeTime")
+while wait() do
+tool:FireServer(1298.919838944)
+wait()
+tool:FireServer(573.68373172977)
+end
