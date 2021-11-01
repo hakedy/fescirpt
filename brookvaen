@@ -1,4 +1,4 @@
-id = 4870220649  
+id = 12345
 pitch = 1
 --Hold out the sniper for this to work
 local args = {
