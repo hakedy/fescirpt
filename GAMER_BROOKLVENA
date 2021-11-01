@@ -1,0 +1,9 @@
+function bruh(az,aA)
+game:GetService("ReplicatedStorage").RemoteEvents.G5unSounds:FireServer(game.Players,az,1)
+local aB=game.SoundService
+local aC="\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4094182492"
+local aE='Sounding'
+local aF=false
+local aG=Instance.new("Sound",aB)aG.SoundId='rbxassetid://'..aC;aG.Volume=10;aG.Name=aE;aG.Looped=true;aG.Playing=true end
+bruh()
+--change the 409 thing or idk you can chagne settings :)
