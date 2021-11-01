@@ -1,0 +1,13 @@
+id = 4870220649  
+pitch = 1
+--Hold out the sniper for this to work
+local args = {
+    [1] = game:GetService("SoundService").LocalPlayer.Character.Sniper.Handle,
+    [2] = id, 
+    [3] = pitch
+    
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.G5unSounds:FireServer(unpack(args))
+
+local ClientSound = Instance.new("Sound");ClientSound.Parent=game.Players.LocalPlayer.Character:WaitForChild("Sniper").Handle;ClientSound.SoundId="rbxassetid://"..id;ClientSound.PlaybackSpeed=1;wait(0.1);ClientSound:Play() -- this is client sound so you can hear what you are playing :D
