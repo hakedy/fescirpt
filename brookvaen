@@ -2,7 +2,7 @@ id = 12345
 pitch = 1
 --Hold out the sniper for this to work
 local args = {
-    [1] = game:GetService("SoundService").LocalPlayer.Character.Sniper.Handle,
+    [1] = game:GetService("Players").LocalPlayer.Character.Sniper.Handle,
     [2] = id, 
     [3] = pitch
     
