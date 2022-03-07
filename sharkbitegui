@@ -1,0 +1,143 @@
+function sandbox(var,func)
+	local env = getfenv(func)
+	local newenv = setmetatable({},{
+		__index = function(self,k)
+			if k=="script" then
+				return var
+			else
+				return env[k]
+			end
+		end,
+	})
+	setfenv(func,newenv)
+	return func
+end
+cors = {}
+mas = Instance.new("Model",game:GetService("Lighting"))
+ScreenGui0 = Instance.new("ScreenGui")
+Frame1 = Instance.new("Frame")
+ImageLabel2 = Instance.new("ImageLabel")
+TextLabel3 = Instance.new("TextLabel")
+LocalScript4 = Instance.new("LocalScript")
+TextButton5 = Instance.new("TextButton")
+LocalScript6 = Instance.new("LocalScript")
+TextButton7 = Instance.new("TextButton")
+LocalScript8 = Instance.new("LocalScript")
+TextButton9 = Instance.new("TextButton")
+LocalScript10 = Instance.new("LocalScript")
+LocalScript11 = Instance.new("LocalScript")
+ScreenGui0.Parent = mas
+ScreenGui0.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Frame1.Parent = ScreenGui0
+Frame1.Position = UDim2.new(0.122037314, 0, 0.364380747, 0)
+Frame1.Size = UDim2.new(0, 264, 0, 397)
+Frame1.BackgroundColor = BrickColor.new("Institutional white")
+Frame1.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel2.Parent = Frame1
+ImageLabel2.Size = UDim2.new(0, 264, 0, 397)
+ImageLabel2.BackgroundColor = BrickColor.new("Institutional white")
+ImageLabel2.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel2.Image = "rbxassetid://3127862184"
+TextLabel3.Parent = Frame1
+TextLabel3.Position = UDim2.new(0, 0, 0.0251889173, 0)
+TextLabel3.Size = UDim2.new(0, 264, 0, 50)
+TextLabel3.BackgroundColor = BrickColor.new("Really black")
+TextLabel3.BackgroundColor3 = Color3.new(0, 0, 0)
+TextLabel3.Font = Enum.Font.PermanentMarker
+TextLabel3.FontSize = Enum.FontSize.Size48
+TextLabel3.Text = "SHARK BITE GUI (AWESOME AND MADE BY HAKEDY)"
+TextLabel3.TextColor = BrickColor.new("Really red")
+TextLabel3.TextColor3 = Color3.new(1, 0, 0)
+TextLabel3.TextScaled = true
+TextLabel3.TextSize = 48
+TextLabel3.TextWrap = true
+TextLabel3.TextWrapped = true
+LocalScript4.Parent = Frame1
+table.insert(cors,sandbox(LocalScript4,function()
+game.Players.LocalPlayer.Backpack.ChildAdded:Connect(function(v)
+	v.TextureId = "rbxassetid://221453362"
+end)
+end))
+TextButton5.Parent = Frame1
+TextButton5.Position = UDim2.new(0.121212125, 0, 0.7581864, 0)
+TextButton5.Size = UDim2.new(0, 200, 0, 50)
+TextButton5.BackgroundColor = BrickColor.new("Really black")
+TextButton5.BackgroundColor3 = Color3.new(0, 0, 0)
+TextButton5.Font = Enum.Font.PermanentMarker
+TextButton5.FontSize = Enum.FontSize.Size48
+TextButton5.Text = "EQUIP MY TOOLS"
+TextButton5.TextColor = BrickColor.new("Lime green")
+TextButton5.TextColor3 = Color3.new(0.133333, 1, 0)
+TextButton5.TextScaled = true
+TextButton5.TextSize = 38
+TextButton5.TextWrap = true
+TextButton5.TextWrapped = true
+LocalScript6.Parent = TextButton5
+table.insert(cors,sandbox(LocalScript6,function()
+script.Parent.MouseButton1Down:Connect(function()
+	for _, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+		v.Parent = game.Players.LocalPlayer.Character
+	end
+end)
+end))
+TextButton7.Parent = Frame1
+TextButton7.Position = UDim2.new(0.121212125, 0, 0.576826215, 0)
+TextButton7.Size = UDim2.new(0, 200, 0, 50)
+TextButton7.BackgroundColor = BrickColor.new("Really black")
+TextButton7.BackgroundColor3 = Color3.new(0, 0, 0)
+TextButton7.Font = Enum.Font.PermanentMarker
+TextButton7.FontSize = Enum.FontSize.Size48
+TextButton7.Text = "300 GUN PLZ"
+TextButton7.TextColor = BrickColor.new("Deep orange")
+TextButton7.TextColor3 = Color3.new(0.992157, 0.529412, 0)
+TextButton7.TextScaled = true
+TextButton7.TextSize = 38
+TextButton7.TextWrap = true
+TextButton7.TextWrapped = true
+LocalScript8.Parent = TextButton7
+table.insert(cors,sandbox(LocalScript8,function()
+script.Parent.MouseButton1Down:Connect(function()
+	for c = 1, 300 do
+		workspace.Events.GamePasses.EquipFlareGun:FireServer()
+	end
+end)
+end))
+TextButton9.Parent = Frame1
+TextButton9.Position = UDim2.new(0.121212125, 0, 0.413098276, 0)
+TextButton9.Size = UDim2.new(0, 200, 0, 50)
+TextButton9.BackgroundColor = BrickColor.new("Really black")
+TextButton9.BackgroundColor3 = Color3.new(0, 0, 0)
+TextButton9.Font = Enum.Font.PermanentMarker
+TextButton9.FontSize = Enum.FontSize.Size48
+TextButton9.Text = "1000 GUNZ 😈"
+TextButton9.TextColor = BrickColor.new("Really red")
+TextButton9.TextColor3 = Color3.new(0.992157, 0, 0)
+TextButton9.TextScaled = true
+TextButton9.TextSize = 38
+TextButton9.TextWrap = true
+TextButton9.TextWrapped = true
+LocalScript10.Parent = TextButton9
+table.insert(cors,sandbox(LocalScript10,function()
+script.Parent.MouseButton1Down:Connect(function()
+	for c = 1, 1000 do
+		workspace.Events.GamePasses.EquipFlareGun:FireServer()
+	end
+end)
+end))
+LocalScript11.Parent = ScreenGui0
+table.insert(cors,sandbox(LocalScript11,function()
+local frame = script.Parent.Frame
+frame.Draggable = true
+frame.Active = true
+frame.Selectable = true
+end))
+for i,v in pairs(mas:GetChildren()) do
+	v.Parent = game:GetService("Players").LocalPlayer.PlayerGui
+	pcall(function() v:MakeJoints() end)
+end
+mas:Destroy()
+for i,v in pairs(cors) do
+	spawn(function()
+		pcall(v)
+	end)
+end
